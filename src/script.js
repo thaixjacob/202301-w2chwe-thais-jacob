@@ -4,19 +4,20 @@ const cellGrid = [
   [1, 1, 1],
 ];
 
-const newcellGrid = [[], [], []];
+const newCellGrid = [[], [], []];
 
-const verifyNeighbours = (grid) => {
-  for (let i = 0; i < grid.length; i++) {
-    //lineas
-    let rowGrid = grid[i];
-    console.log(rowGrid);
-    for (let j = 0; j < rowGrid.length; j++) {
-      //columna
-      let columnGrid = rowGrid[j];
-      console.log(columnGrid);
+for (let i = 0; i < cellGrid.length; i++) {
+  for (let j = 0; j < cellGrid[i].length; j++) {
+    let cell = cellGrid[i][j];
+
+    let neighborsCeels = 0;
+
+    if (cell === 0 && neighborsCeels === 3) {
+      newCellGrid[i][j] = 1;
+    } else if (cell === 1 && (neighborsCeels < 2 || neighborsCeels > 3)) {
+      newCellGrid[i][j] = 0;
+    } else {
+      newCellGrid[i][j] = cell;
     }
   }
-};
-
-verifyNeighbours(cellGrid);
+}
