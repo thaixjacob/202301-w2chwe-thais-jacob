@@ -13,23 +13,7 @@ const iterateGrid = (grid) => {
     for (let j = 0; j < grid[i].length; j++) {
       cell = grid[i][j];
       let neighboursCeels = 0;
-      if (grid[i - 1][j - 1] === 1) {
-        neighboursCeels++;
-      } else if (grid[i - 1][j] === 1) {
-        neighboursCeels++;
-      } else if (grid[i - 1][j + 1] === 1) {
-        neighboursCeels++;
-      } else if (grid[i][j - 1] === 1) {
-        neighboursCeels++;
-      } else if (grid[i][j + 1] === 1) {
-        neighboursCeels++;
-      } else if (grid[i + 1][j - 1] === 1) {
-        neighboursCeels++;
-      } else if (grid[i + 1][j] === 1) {
-        neighboursCeels++;
-      } else if (grid[i + 1][j] === 1) {
-        neighboursCeels++;
-      } else if (grid[i + 1][j + 1] === 1) {
+      if (cell === 1 && !undefined) {
         neighboursCeels++;
       } else {
         neighboursCeels = 0;
